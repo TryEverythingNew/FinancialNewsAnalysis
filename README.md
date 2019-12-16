@@ -40,10 +40,18 @@ Step 2: run python code to classify
 
 ## Explanation of Implementation
 
-I studied the web format of financial news in yahoo. And then I wrote programs to download the news for interested stocks.
+I studied the web format of financial news in yahoo.
+
+And then I wrote programs to download the news for interested stocks.
+
 This part requires a lot of research on html format, BeautifulSoup usage, and selenium.
+
 To classify news, I prepared a training data set with labels. You can find them under train_news sub-folder.
+
 I manually did the labeling on my own. This labeled data is then used to create forward index.
+
 And then I did many study on how to create a forward index and classifier using metapy.
+
 By referring to many materials, I chose NaiveBayes classifier to classifier whether a news is good or bad.
+
 The result is pretty good!
