@@ -1,0 +1,17 @@
+stop-words = "lemur-stopwords.txt"
+index = "train_idx"
+corpus = "line.toml"
+prefix = "."
+dataset = "train_news"
+[[analyzers]]
+	method = "ngram-word"
+	ngram = 1
+	[[analyzers.filter]]
+		suppress-tags = true
+		type = "icu-tokenizer"
+	[[analyzers.filter]]
+		type = "lowercase"
+	[[analyzers.filter]]
+		max = 30
+		type = "length"
+		min = 2

@@ -15,6 +15,7 @@ def count_word(doc):
     tokens, counts = [], []
     return {token: count for token, count in trigrams.items()}
 
+train_idx = metapy.index.make_forward_index('train.toml')
 with open('./scraper_code/news.txt', 'r') as file:
     news_list = [line.strip() for line in file.readlines()]
 with open('./scraper_code/news_url.txt', 'r') as file:
@@ -24,5 +25,5 @@ assert len(url_list) == len(news_list), "The number of urls mismatchs the number
 for url, news in zip(url_list, news_list):
     doc = metapy.index.Document()
     doc.content(news)
-    cnt_list.append( count_word(doc))
+    
 
